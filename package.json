@@ -1,0 +1,39 @@
+{
+  "name": "apartments-app",
+  "version": "0.0.1",
+  "description": "Apartments App",
+  "scripts": {
+    "cp-bs": "ncp ./node_modules/bootstrap/dist ./public/dist/bootstrap",
+    "dist": "npm run cp-bs",
+    "start": "npm run dist && node server.js",
+    "lint": "eslint src/"
+  },
+  "author": "Kabir Baidhya <kabirbaidhya@gmail.com>",
+  "devDependencies": {
+    "babel-core": "^6.10.4",
+    "babel-eslint": "^6.0.5",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "clean-css": "^3.4.18",
+    "css-loader": "^0.23.1",
+    "eslint": "^2.13.1",
+    "eslint-plugin-react": "^5.2.2",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "ncp": "^2.0.0",
+    "node-sass": "^3.8.0",
+    "react-hot-loader": "^1.3.0",
+    "sass-loader": "^3.2.1",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "immutable": "^3.8.1",
+    "react": "^15.1.0",
+    "react-bootstrap": "^0.29.5",
+    "react-dom": "^15.1.0"
+  }
+}

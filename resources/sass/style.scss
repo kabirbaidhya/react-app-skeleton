@@ -1,0 +1,10 @@
+.thumbnail > img {
+    width: 242px;
+    height: 200px;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1000px;
+    }
+}
