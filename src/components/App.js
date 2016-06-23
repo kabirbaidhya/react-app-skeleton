@@ -1,45 +1,45 @@
 import React, {Component} from 'react';
-import Apartments from './Apartments';
+import ListView from './grid/ListView';
+import {apartments}  from '../temp/data';
+import DetailModal from './DetailModal';
 
-const apartments = [
-    {
-        id: 1,
-        title: 'Apartment 101',
-        image: '/images/thumbnaildiv.png',
-        description: 'lorem impsum dolor',
-    },
-    {
-        id: 2,
-        title: 'Apartment 233',
-        image: '/images/thumbnaildiv.png',
-        description: 'lorem impsum dolor',
-    },
-    {
-        id: 3,
-        title: 'BC 123',
-        image: '/images/thumbnaildiv.png',
-        description: 'lorem impsum dolor',
-    },
-    {
-        id: 4,
-        title: 'ggs 77',
-        image: '/images/thumbnaildiv.png',
-        description: 'lorem impsum dolor',
-    },
-    {
-        id: 5,
-        title: 'sdf 2443',
-        image: '/images/thumbnaildiv.png',
-        description: 'dfsd slkdfj',
-    },
-];
+const initialState = () => ({
+    modal: {
+        show: false,
+        data: {}
+    }
+});
 
 class App extends Component {
+
+    constructor(props) {
+        super(props);
+
+        this.state = initialState();
+    }
+
+    showModal(data) {
+        this.setState({
+            modal: {
+                show: true,
+                data,
+                onHide: () => this.setState(initialState())
+            }
+        });
+    }
+
+    hideModal() {
+        this.setState(initialState());
+    }
+
     render() {
+        let {modal} = this.state;
+
         return (
             <div>
-                <h1>Apartments</h1>
-                <Apartments list={apartments}/>
+                <h1>Apartments Available</h1>
+                <ListView list={apartments} showModal={this.showModal.bind(this)}/>
+                <DetailModal {...modal}/>
             </div>
         );
     }
