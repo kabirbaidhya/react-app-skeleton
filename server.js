@@ -1,6 +1,6 @@
-var webpack = require('webpack');
-var WebpackDevServer = require('webpack-dev-server');
-var config = require('./webpack.config');
+let webpack = require('webpack');
+let WebpackDevServer = require('webpack-dev-server');
+let config = require('./webpack.dev.config');
 
 const SERVER_PORT = 3000;
 const SERVER_HOST = 'localhost';

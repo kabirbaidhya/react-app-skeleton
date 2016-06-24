@@ -1,7 +1,7 @@
 {
-  "name": "apartments-app",
+  "name": "app-skeleton",
   "version": "0.0.1",
-  "description": "Apartments App",
+  "description": "A minimalistic app skeleton using Webpack, React, Redux, & React Hot Loader",
   "scripts": {
     "cp-bs": "ncp ./node_modules/bootstrap/dist ./public/dist/bootstrap",
     "dist": "npm run cp-bs",
@@ -30,10 +30,15 @@
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
+    "bluebird": "^3.4.1",
     "bootstrap": "^3.3.6",
     "immutable": "^3.8.1",
     "react": "^15.1.0",
     "react-bootstrap": "^0.29.5",
-    "react-dom": "^15.1.0"
+    "react-dom": "^15.1.0",
+    "react-redux": "^4.4.5",
+    "redux": "^3.5.2",
+    "redux-thunk": "^2.1.0",
+    "whatwg-fetch": "^1.0.0"
   }
 }
